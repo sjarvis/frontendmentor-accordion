@@ -164,7 +164,8 @@
           .container {
                display: grid;
                grid-template-columns: 1fr 1fr;
-               width: 1000px;
+               width: 90%;
+               max-width: 1000px;
                padding: 2rem;
                /* overflow: hidden; */
           }
