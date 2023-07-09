@@ -35,7 +35,6 @@
           font: inherit;
      }
 
-
      p,
      h1,
      h2,
@@ -47,7 +46,7 @@
      }
 
 
-     /* -- COLORS ---------------------------- */
+     /* -- COLORS and TYPOGRAPHY ---------------------------- */
      :root {
 
           --clr-dark-blue: hsl(238, 29%, 16%);
@@ -87,8 +86,7 @@
 
 
      body {
-          /* display: flex;
-     justify-content: center; */
+          font-family: var(--ff-body);
           --bg-default: linear-gradient(0deg, var(--clr-soft-blue), var(--clr-soft-violet));
           background: var(--bg, var(--bg-default));
           background-repeat: no-repeat;
@@ -148,6 +146,7 @@
      main {
           padding: 1rem 1.5rem 2rem;
           height: max-content;
+          overflow: auto;
      }
 
      h1 {
@@ -167,7 +166,7 @@
                width: 90%;
                max-width: 1000px;
                padding: 2rem;
-               /* overflow: hidden; */
+               overflow: hidden;
           }
 
           h1 {
@@ -179,7 +178,6 @@
                width: 100%;
                margin: 0;
                padding: 0;
-
           }
 
           .image__top {
@@ -217,19 +215,20 @@
                top: 8.5rem;
                left: -9.125rem;
                z-index: 9999;
-
           }
 
      }
-
-
 
 }
 
 /* layer base */
 
-
 @layer accordions {
+
+     main {
+          height: auto;
+     }
+
 
      h3 {
           display: block;
@@ -325,16 +324,9 @@
           transform: translate(-2px, 0) rotate(-45deg);
      }
 
-
      ul li input[type="checkbox"]:checked~h3 {
           font-weight: 400;
      }
-
-
-     /* main:has(input[type="checkbox"]:checked) {
-          height: 800px;
-     } */
-
 
      @keyframes flipdown {
           0% {
